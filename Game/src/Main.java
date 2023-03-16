@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -11,51 +16,43 @@ public class Main {
         // short lühikenumber = 312
         // long pikknumber = 1231232321L
 
-        int worldWidth = 10;
-        int worldHeight = 5;
+        Scanner scanner = new Scanner(System.in);
 
-        int playerXCoordinate = getRandomCoordinate(worldWidth);
-        int playerYCoordinate = getRandomCoordinate(worldHeight);
-        char playerSymbol = 'X';
+        World world = new World(10, 5);
+        Player player = new Player(world.width, world.height);
+        Dragon dragon = new Dragon(world.width, world.height);
+        Orc orc = new Orc(world.width, world.height);
 
-        int dragonXCoordinate = getRandomCoordinate(worldWidth);
-        int dragonYCoordinate = getRandomCoordinate(worldHeight);
-        char dragonSymbol = 'D';
+        Item sword = new Item(10,1,"Mõõk", world.width, world.height);
+        Item hammer = new Item(5,3,"Haamer", world.width, world.height);
+        Item boot = new Item(1,10,"Saabas", world.width, world.height);
 
-        int orcXCoordinate = getRandomCoordinate(worldWidth);
-        int orcYCoordinate = getRandomCoordinate(worldHeight);
-        char orcSymbol = 'O';
+        List<Item> items = new ArrayList<>(Arrays.asList(sword, hammer, boot));
 
-        for (int y = 0; y < worldHeight; y++) {
+        world.printMap(
+                world.width, world.height,
+                player.xCoordinate, player.yCoordinate, player.symbol,
+                dragon.xCoordinate, dragon.yCoordinate, dragon.symbol,
+                orc.xCoordinate, orc.yCoordinate, orc.symbol, items
+        );
+
+        String input = scanner.nextLine();
+
+        while (!input.equals("end")) {
+            player.move(input, world);
+            world.printMap(world.width, world.height,
+                    player.xCoordinate, player.yCoordinate, player.symbol,
+                    dragon.xCoordinate, dragon.yCoordinate, dragon.symbol,
+                    orc.xCoordinate, orc.yCoordinate, orc.symbol, items);
             System.out.println();
-            for (int x = 0; x < worldWidth; x++) {
-                if (y == 0 || y == worldHeight-1) {
-                    System.out.print("-");
-                } else if (x == 0 || x == worldWidth-1) {
-                    System.out.print("|");
-                } else {
-                    findCharacter(playerXCoordinate, playerYCoordinate, playerSymbol, dragonXCoordinate, dragonYCoordinate, dragonSymbol, orcXCoordinate, orcYCoordinate, orcSymbol, y, x);
+            for (Item i : items) {
+                if (i.xCoordinate == player.xCoordinate && i.yCoordinate == player.yCoordinate) {
+                    player.item = i;
+                    System.out.println("Korjasid eseme: " + player.item.name);
+                    break;
                 }
             }
-        }
-    }
-
-    private static int getRandomCoordinate(int coordinate) {
-        return (int) (Math.random() * (coordinate - 2) + 1);
-    }
-
-    private static void findCharacter(
-            int playerXCoordinate, int playerYCoordinate, char playerSymbol, int dragonXCoordinate, int dragonYCoordinate,
-            char dragonSymbol, int orcXCoordinate, int orcYCoordinate, char orcSymbol, int mapY, int mapX
-    ) {
-        if (playerXCoordinate == mapX && playerYCoordinate == mapY) {
-            System.out.print(playerSymbol);
-        } else if (dragonXCoordinate == mapX && dragonYCoordinate == mapY) {
-            System.out.print(dragonSymbol);
-        } else if (orcXCoordinate == mapX && orcYCoordinate == mapY) {
-            System.out.print(orcSymbol);
-        } else {
-            System.out.print(" ");
+            input = scanner.nextLine();
         }
     }
 }
