@@ -53,13 +53,13 @@ public class Main {
 
     private static void writeCipherToFile(String inputFilePath, String outputFile) {
         try {
-            List<String> lines = cipherFileText(inputFilePath);
+            List<String> cipheredLines = cipherFileText(inputFilePath);
 
-            if (lines.size() > 0) {
+            if (cipheredLines.size() > 0) {
                 FileWriter myWriter = new FileWriter(outputFile);
 
-                for (String line : lines) {
-                    myWriter.write(line + '\n');
+                for (String cipheredLine : cipheredLines) {
+                    myWriter.write(cipheredLine + '\n');
                 }
 
                 myWriter.close();
