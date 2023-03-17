@@ -17,7 +17,7 @@ public class Main {
         int step = 31;
         String text = "Tere, minu nimi on Steven!";
 
-        String inputFilePath = "F:\\OOP2023\\oo2023\\05_kontrolltoo1\\KT1\\src\\file.txt";
+        String inputFilePath = "F:\\OOP2023\\oo2023\\05_kontrolltoo1\\KT1\\file.txt";
         String outputFile = "output.txt";
 
         String cipheredText = Cipher.cipherText(text, step);
@@ -64,7 +64,7 @@ public class Main {
 
                 myWriter.close();
 
-                System.out.println("New file written.");
+                System.out.println("Uus file kirjutatud.");
             }
         } catch (IOException e) {
             System.out.println("An error occurred.");
