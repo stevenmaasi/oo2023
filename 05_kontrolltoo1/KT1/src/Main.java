@@ -14,17 +14,17 @@ public class Main {
          */
 
         // Step max = alphabet.length() = 31
-        int step = 31;
+        int step = 15;
         String text = "Tere, minu nimi on Steven!";
-
-        String inputFilePath = "F:\\OOP2023\\oo2023\\05_kontrolltoo1\\KT1\\file.txt";
-        String outputFile = "output.txt";
 
         String cipheredText = Cipher.cipherText(text, step);
 
         System.out.println();
         System.out.println("Šifreeritud tekst: " + cipheredText);
         System.out.println("Dešifreeritud tekst: " + Decipher.decipherText(cipheredText, step));
+
+        String inputFilePath = "F:\\OOP2023\\oo2023\\05_kontrolltoo1\\KT1\\file.txt";
+        String outputFile = "output.txt";
 
         writeCipherToFile(inputFilePath, outputFile);
     }
