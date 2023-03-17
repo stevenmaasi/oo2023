@@ -1,3 +1,4 @@
 10
 In fact, caching is one of the most efficient ways to improve the experience of our site,
 especially when our users are on bandwidth restricted devices or slow networks.
+Tere, minu nimi on Steven!

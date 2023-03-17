@@ -14,7 +14,7 @@ public class Main {
          */
 
         // Step max = alphabet.length() = 31
-        int step = 15;
+        int step = 10;
         String text = "Tere, minu nimi on Steven!";
 
         String cipheredText = Cipher.cipherText(text, step);
