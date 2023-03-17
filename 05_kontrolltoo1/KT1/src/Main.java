@@ -64,7 +64,7 @@ public class Main {
 
                 myWriter.close();
 
-                System.out.println("Uus file kirjutatud.");
+                System.out.println("Uus file kirjutatud: " + outputFile);
             }
         } catch (IOException e) {
             System.out.println("An error occurred.");
