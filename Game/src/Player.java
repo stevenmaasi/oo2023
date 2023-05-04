@@ -1,31 +1,18 @@
-public class Player {
-    int xCoordinate;
-    int yCoordinate;
-    char symbol;
-
+public class Player extends Character {
     Direction direction;
     Item item;
 
     public Player(int worldWidth, int worldHeight) {
-        this.xCoordinate = getRandomCoordinate(worldWidth);
-        this.yCoordinate = getRandomCoordinate(worldHeight);
-        this.symbol = 'X';
+        super(worldWidth, worldHeight, 'X');
         this.direction = Direction.UP;
     }
 
-    private static int getRandomCoordinate(int worldDimension) {
-        return (int) (Math.random() * (worldDimension - 2) + 1);
-    }
-
     public void move(String input, World world) {
-        if (input.equals("w")) {
-            this.direction = Direction.UP;
-        } else if (input.equals("s")) {
-            this.direction = Direction.DOWN;
-        } else if (input.equals("a")) {
-            this.direction = Direction.LEFT;
-        } else if (input.equals("d")) {
-            this.direction = Direction.RIGHT;
+        switch (input) {
+            case "w" -> this.direction = Direction.UP;
+            case "s" -> this.direction = Direction.DOWN;
+            case "a" -> this.direction = Direction.LEFT;
+            case "d" -> this.direction = Direction.RIGHT;
         }
 
         if (direction.equals(Direction.UP) && this.yCoordinate > 1) {

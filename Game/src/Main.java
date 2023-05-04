@@ -23,6 +23,8 @@ public class Main {
         Dragon dragon = new Dragon(world.width, world.height);
         Orc orc = new Orc(world.width, world.height);
 
+        List<Character> characters = new ArrayList<>(Arrays.asList(player, dragon, orc));
+
         Item sword = new Item(10,1,"Mõõk", world.width, world.height);
         Item hammer = new Item(5,3,"Haamer", world.width, world.height);
         Item boot = new Item(1,10,"Saabas", world.width, world.height);
