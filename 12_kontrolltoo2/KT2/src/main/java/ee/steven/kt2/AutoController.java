@@ -12,6 +12,40 @@ public class AutoController {
     @Autowired
     AutoRepository autoRepository;
 
+    @Autowired
+    SoiduPaevikRepository soiduPaevikRepository;
+
+    @GetMapping("get-kilometraaz-by-auto")
+    public double getKilometraazByAuto(@RequestParam Auto auto) {
+        List<SoiduPaevik> soiduPaevik =  soiduPaevikRepository.findSoiduPaevikByAuto(auto);
+
+        double kilometraaz = 0;
+
+        for (int i = 0; i < soiduPaevik.size(); i++) {
+            kilometraaz += soiduPaevik.get(i).getKilometraaz();
+        }
+
+        return kilometraaz;
+    }
+
+    @GetMapping("get-kilometraaz-by-omanik")
+    public double getKilometraazByAuto(@RequestParam Omanik omanik) {
+        List<Auto> autod = autoRepository.findByOmanik(omanik);
+
+        double kilometraaz = 0;
+
+        for (int i = 0; i < autod.size(); i++) {
+            List<SoiduPaevik> soiduPaevikud =  soiduPaevikRepository.findSoiduPaevikByAuto(autod.get(i));
+
+            for (int j = 0; j < soiduPaevikud.size(); j++) {
+                kilometraaz += soiduPaevikud.get(j).getKilometraaz();
+            }
+        }
+
+
+        return kilometraaz;
+    }
+
     @GetMapping("get-by-mark")
     public List<Auto> getByMark(@RequestParam String mark) {
         return autoRepository.findByMark(mark);
