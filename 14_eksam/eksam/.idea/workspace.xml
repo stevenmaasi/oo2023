@@ -5,38 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6a9554-9c87-4496-9568-03d0496a659d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a3d2c42-ed45-4813-9e53-49e056fe4a51.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a3d2c42-ed45-4813-9e53-49e056fe4a51/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a3d2c42-ed45-4813-9e53-49e056fe4a51/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a3d2c42-ed45-4813-9e53-49e056fe4a51/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a3d2c42-ed45-4813-9e53-49e056fe4a51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/EksamApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/PostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/PostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ee/steven/eksam/EksamApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ee/steven/eksam/EksamApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ee/steven/eksam/Post.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ee/steven/eksam/PostRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/ee/steven/eksam/EksamApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/steven/eksam/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ee/steven/eksam/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ee/steven/eksam/Post.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Student Admin/IdeaProjects/oo2023/10_tunnirakenduse_lahendus/SpingDB",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
