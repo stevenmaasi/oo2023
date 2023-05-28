@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class PostService {
 
-    // private static final String CHROME_DRIVER_PATH = "C:\\Users\\Stewmeister\\Downloads\\chromedriver.exe";
-    private static final String CHROME_DRIVER_PATH = "C:\\Users\\Student Admin\\Downloads\\chromedriver.exe";
+    private static final String CHROME_DRIVER_PATH = "C:\\Users\\Stewmeister\\Downloads\\chromedriver.exe";
+    // private static final String CHROME_DRIVER_PATH = "C:\\Users\\Student Admin\\Downloads\\chromedriver.exe";
 
     @Autowired
     PostRepository postRepository;
